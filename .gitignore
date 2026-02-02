@@ -1,3 +1,5 @@
 __pycache__
 env/
 .env
+app/calculation.py
+test_calculation.py
