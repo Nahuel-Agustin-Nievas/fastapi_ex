@@ -15,7 +15,11 @@ jobs:
           with:
             python-version: '3.11.9'
 
-        - name: update pip
-          run: pip install --upgrade pip
         - name: install dependencies
-          run: pip install -r requirements.txt
+          run: |
+            pip install --upgrade pip
+            pip install pytest
+            pip install -r requirements.txt
+
+        - name: run tests with pytest
+          run: pytest tests/
