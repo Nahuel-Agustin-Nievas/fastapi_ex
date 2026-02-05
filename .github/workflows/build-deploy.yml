@@ -56,8 +56,9 @@ jobs:
         needs: build
         
         steps:
-        - name: deploying stufff
-          run: echo "deploying stuff"
+        - name: Trigger Render Deploy
+          run: |
+            curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
 
 
 
