@@ -116,7 +116,7 @@ def test_update_post(authorized_client, test_posts, test_user):
     assert updated_post.title == "Updated Title"
     assert updated_post.content == "Updated Content"
     assert updated_post.published == False
-    assert response.status_code == 200
+    assert response.status_code == 201  # Cooriginal es 200, pero se cambió a 201 para indicar que se ha creado un nuevo recurso (la versión actualizada del post)
 
 
 def test_another_user_update_post(authorized_client,client, test_posts):
